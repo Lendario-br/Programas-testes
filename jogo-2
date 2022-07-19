@@ -1,0 +1,22 @@
+# Tente advinha o numero aleatório
+# (random) usado para gerar um valor aleatório
+# (randint) usado para definir o valor aleatório
+from random import randint
+computador = randint(0,10)
+print('-=-=-=-' * 20)
+print('Seja bem-vindo a esse mine jogo em py. :)')
+print('O jogo funciona da seguinte forma, o computador ira gerar um numero de 0 a 10 aleatoriamente.')
+print('Seu objetio é tentar acertar esse numero.')
+print('Boa sorte! :D')
+print('-=-=-=-' * 20)
+chute = int(input('Digite seu chute: '))
+if chute < computador:
+    print('Errou')
+    print('Seu valor ({}) foi menor do que o do computador ({})'.format(chute,computador))
+if chute > computador:
+    print('errou')
+    print('Seu valor ({}) foi maior do que o do computador ({})'.format(chute,computador))
+if chute == computador:
+    print('Parabéns! Você acertou o numero. :D')
+    print('Seu valor ({}) foi igual ao do computador ({})'.format(chute,computador))
+print('--------Fim do Jogo--------')
