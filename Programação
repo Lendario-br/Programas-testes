@@ -1,0 +1,51 @@
+# Jokenpô
+
+#computador
+import random
+lista = ['pedra','tesoura','papel']
+computador = random.choice(lista)
+print('-=-'*15)
+#regras
+print('Olá Mundo!!!!!!')
+print('Seja bem-vindo a seu segundo jogo!!!! Está feliz por jogar comtra o pc? >:3')
+print('O jogo dessa vez será Jokenpô. As regras são: \n 1-Só pode escolher entre pedra ,papel ou tesoura; \n 2- Números serão aceitos sendo 1- tesoura, 2- papel, 3- pedra; \n BOA SORTE hehehehe >:3')
+print('-=-'*15)
+
+# jogador
+chute = input('Digite seu chute: ')
+print('-=-'*15)
+if chute == '1' or chute == 'tesoura':
+    chute = 'tesoura'
+elif chute == '2' or chute == 'papel':
+    chute = 'papel'
+elif chute == '3' or chute == 'pedra':
+    chute = 'pedra'
+
+#jogo-jogador
+if chute == computador:
+    print('empate!')
+
+elif chute == 'pedra' and computador == 'tesoura':
+    print('Jogador ganhou!')
+
+elif chute == 'tesoura' and computador == 'papel':
+    print('Jogador ganhou!') 
+
+elif chute == 'papel' and computador == 'pedra':
+    print('Jogador ganhou!') 
+
+#computador
+elif computador == 'pedra' and chute =='tesoura':
+    print('computador ganhou')
+    
+elif computador == 'tesoura' and chute == 'papel':
+    print('computador ganhou')
+    
+elif computador == 'papel' and chute == 'pedra':
+    print('computador ganhou')
+else:
+    print('\033[1;31m Infelismente o valor digitado é INVALIDO!\033[m')
+    chute = '\033[1;31mINVALIDO!\033[m'
+print('Computador: {}\nJogador: {}'.format(computador,chute))
+print('-=-'*15)
+print('\033[1;36m=--FIM--DO--PROGRAMA--=\033[m')
